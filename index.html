@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #000;
+      color: #d4af37;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1.5px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      color: #e6d8a3;
+    }
+
+    p strong {
+      color: #ffd700;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      border-left: 4px solid #d4af37;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 10px;
+      width: 0;
+      height: 2px;
+      background: gold;
+      transition: 0.5s;
+    }
+
+    h2:hover::after { width: 50%; }
+
+    h3 {
+      font-size: 1.4rem;
+      color: #ffd700;
+    }
+
+    .glow-text {
+      background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+    }
+
+    @keyframes shine {
+      0% { background-position: -200%; }
+      100% { background-position: 200%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      border-bottom: 1px solid #d4af37;
+    }
+
+    header h1 { font-size: 3.5rem; }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+
+    section { padding: 60px 10%; }
+
+    .card {
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(4px);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      background-color: #111;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 20px #ffd700, 0 0 40px rgba(255, 215, 0, 0.4);
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 18px;
+    }
+
+    ul li {
+      margin: 8px 0;
+      color: #e6d8a3;
+    }
+
+    ul li::marker { color: gold; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-shadow: 0 0 10px #ffd700;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #d4af37;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 1s;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 class="glow-text">Varun Bhagia</h1>
+  <p class="glow-text">
+    Machine Learning Enthusiast | Full Stack Developer | Building Intelligent & Scalable Solutions
+  </p>
+</header>
+
+<!-- About -->
+<section class="fade-in">
+  <h2>About Me</h2>
+  <p>
+    I design and build intelligent, scalable digital systems where data meets real-world impact. 
+    My work combines machine learning and full-stack development to transform complex ideas into practical solutions.
+  </p>
+  <br>
+  <p>
+    I focus on writing clean, efficient code and building systems that are not only functional, but thoughtfully engineered 
+    for performance and usability.
+  </p>
+  <br>
+  <p>
+    I am continuously working on improving my skills by building real-world projects and exploring new technologies.
+  </p>
+</section>
+
+<!-- Education -->
+<section class="fade-in">
+  <h2>Education</h2>
+  <div class="card">
+    <h3>Institute of Technology and Management, Gwalior</h3>
+    <p><strong>Degree:</strong> B.Tech in Computer Science</p>
+    <p><strong>CGPA:</strong> 5.9 </p>
+    <p><strong>Relevant Coursework:</strong></p>
+    <ul>
+      <li>Data Structures & Algorithms</li>
+      <li>Machine Learning</li>
+      <li>SQL</li>
+      <li>C++ Programming</li>
+      <li>Full Stack Development</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="fade-in">
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+
+    <div class="card">
+      <h3>Languages</h3>
+      <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+        <li>HTML/CSS</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Developer Tools</h3>
+      <ul>
+        <li>Eclipse</li>
+        <li>VS Code</li>
+        <li>Google Cloud Platform</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Technologies</h3>
+      <ul>
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>MongoDB</li>
+        <li>GitHub</li>
+        <li>Linux</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="fade-in">
+  <h2>Featured Projects</h2>
+
+  <div class="card">
+    <h3>Fraud Detection Model (2024)</h3>
+    <ul>
+      <li>Developed ML model using real-world financial data.</li>
+      <li>Applied Logistic Regression, Random Forest, Naive Bayes.</li>
+      <li>Evaluated using ROC-AUC, Confusion Matrix.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Price Comparison Website (2025)</h3>
+    <ul>
+      <li>Built real-time product comparison platform.</li>
+      <li>Used Node.js, Express, MongoDB.</li>
+      <li>Implemented filtering and price-drop alerts.</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- Experience -->
+<section class="fade-in">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <h3>Machine Learning Developer (2024)</h3>
+    <ul>
+      <li>Built fraud detection pipeline using Scikit-learn.</li>
+      <li>Processed 20,000+ dataset with feature engineering.</li>
+      <li>Achieved 90% accuracy and strong ROC-AUC.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Full Stack Developer (2025)</h3>
+    <ul>
+      <li>Developed real-time price comparison system.</li>
+      <li>Built responsive frontend and backend APIs.</li>
+      <li>Added price alerts and automation features.</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- Certifications -->
+<section class="fade-in">
+  <h2>Certifications</h2>
+  <div class="card">Zscaler Zero Trust Cloud Security Virtual Internship</div>
+  <div class="card">Google Generative AI Virtual Internship</div>
+  <div class="card">Google Android Developer Virtual Internship</div>
+</section>
+
+<!-- Contact -->
+<section class="fade-in">
+  <h2>Get In Touch</h2>
+  <div class="card">
+    <p><strong>Location:</strong> Gwalior, Madhya Pradesh - 474001</p>
+    <p><strong>Call:</strong> +91 8962701750</p>
+    <p><strong>Email:</strong> <a href="mailto:prachibhagia79@gmail.com">prachibhagia79@gmail.com</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/varun86420" target="_blank">github.com/varun86420</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/varun-bhagia-5bac583/" target="_blank">linkedin.com/in/varun-bhagia-5bac583</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Varun Bhagia | Designed with precision & excellence</p>
+</footer>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html> 
